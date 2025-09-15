@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "RidiRecapV2",
+	"description": "리디 기록 관리",
+	"version": "1.0",
+	"icons": {
+		"16": "img/favicon16.png"
+	},
+	"sidebar_action": {
+		"default_title":"ri",
+		"default_page": "index.html",
+		"default_icon": {
+			"16": "img/favicon16.png"
+		}
+	},
+	"permissions": ["sidePanel","webRequest"],
+	"host_permissions": [
+		"https://ridibooks.com/*",
+		"https://library-api.ridibooks.com/*",
+		"https://book-api.ridibooks.com/*"
+	]
+}
