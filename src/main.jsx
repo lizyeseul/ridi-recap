@@ -1,10 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import Index from "./Index"
+import DB from "@/scripts/connect_db.js"
+import SESSION from "@/scripts/session.js"
+import UTIL from "@/scripts/utils.js"
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  // <StrictMode>
+    <Index />
+  // </StrictMode>,
 )
