@@ -48,7 +48,7 @@ function Order() {
 	function OrderInfoRow({orderInfo}) {
 		return (
 			<li>
-				{orderInfo.order_no} : {moment(orderInfo.order_dttm).format("YYYYMMDD")}, {orderInfo.total_amt}
+				{orderInfo.order_no} : {dayjs(orderInfo.order_dttm).format("YYYYMMDD")}, {orderInfo.total_amt}
 			</li>
 		)
 	}

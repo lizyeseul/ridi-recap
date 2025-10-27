@@ -1,6 +1,7 @@
 import orderClass from "./order.js";
 import unitClass from "./unit.js";
 import bookClass from "./book.js";
+import UTIL from "@/scripts/utils.js";
 
 export default class purchaseClass {
 	constructor(data) {
@@ -17,21 +18,21 @@ export default class purchaseClass {
 //			console.debug("type err")
 		}
 	}
-	
+
 	unit;
 	order;
 	book;
-	
+
 	order_no;
 	order_dt;
 	unit_id;
 	book_id;
 	is_completed;
 	service_type;
-	
+
 	static schema = {
 	}
-	
+
 	setOrderClass(a) {
 		this.order = new orderClass(a);
 	}
@@ -41,17 +42,17 @@ export default class purchaseClass {
 	setBookClass(a) {
 		this.book = new bookClass(a);
 	}
-	
+
 	setRawClass(o,u,b) {
 		this.setOrderClass(o);
 		this.setUnitClass(u);
 		this.setBookClass(b);
 	}
-	
+
 	jsonObj() {
 		return JSON.parse(JSON.stringify(this));
 	}
-	
+
 	validate() {
 		return true;
 	}

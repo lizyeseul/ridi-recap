@@ -38,10 +38,11 @@ function Book() {
 	async function findLibList() {
 		setIsSync(true);
 		var tempList = await DB.getValueByIdx("store_unit", "unit_id", { direction: "prev"});
+		tempList.sort((a, b) => a.unit_title > b.unit_title);
 		setUnitInfo(tempList.filter((u) => {
 			return true;
-			u.property = u.property || {is_adult_only:true};
-			return u.property.is_adult_only === false;
+			// u.property = u.property || {is_adult_only:true};
+			// return u.property.is_adult_only === false;
 		}));
 		setIsSync(false);
 	}

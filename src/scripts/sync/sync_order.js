@@ -1,4 +1,10 @@
 import DB from "@/scripts/connect_db.js";
+import UTIL from "@/scripts/utils.js";
+import { URL, parser } from "@/scripts/static.js";
+import dayjs from "dayjs";
+import $ from "jquery";
+//TODO react custom hook 형태로 변경
+
 var SYNC_ORDER = {
 	/**
 	 * store_order에 있는 book_id중에서 store_book에 없는 데이터 껍데기 생성
@@ -22,6 +28,11 @@ var SYNC_ORDER = {
 			await DB.updateData("store_book", bookId, { book_id: bookId, unit_id: 0 }, "update");
 		}
 	},
+	/**
+	 * store_order에 없는 주문번호 크롤링
+	 * @param {setState} setIngPage 화면에 진행중 라벨 표시
+	 * @returns
+	 */
 	syncOrderRecent: async function(setIngPage) {
 		let maxOrderSeq = await DB.getValueByIdx("store_order","order_seq", {direction: "prev", limit: 1});
 		if(UTIL.isEmpty(maxOrderSeq[0])) return;
@@ -35,8 +46,16 @@ var SYNC_ORDER = {
 		await SYNC_ORDER.syncOrder(1, Math.floor(((lastOrderSeq-maxOrderSeq)+14) / 15), setIngPage);
 		//TODO store_order에서 order_seq maxOrderSeq 보다 큰 것들 가져와서 book_list안에 있는 book_id기준으로 store_book정보 업데이트
 	},
+	/**
+	 * 결제내역 일부만 크롤링
+	 * @param {number} fromPage 결제내역 크롤링 시작 페이지
+	 * @param {number} toPage 결제내역 크롤링 끝 페이지
+	 * @param {setState} setIngPage 화면에 진행중 라벨 표시
+	 */
 	syncOrder: async function(fromPage, toPage, setIngPage) {
-		document.cookie = "user_device_type=Pc; path=/; Domain=.ridibooks.com";	//TODO 일단 고정
+		document.cookie = "user_device_type=Pc; path=/; Domain=.ridibooks.com";	//TODO 일단 쿠키 고정, 위치 이동하거나 다른곳에도 적용하거나 기존쿠키값 저장하고 있다가 로직 끝나면 원본으로 변경하거나
+
+		//TODO 리셋옵션 적용하면 해당 페이지들 order_seq 계산해서 삭제 후 크롤링 진행
 		const pageTasks = [];
 		let processedCount = 0; // 전역 카운터
 		setIngPage("stage 1/2 : "+UTIL.toString(processedCount)+"/"+UTIL.toString(toPage - fromPage + 1));
@@ -109,6 +128,10 @@ var SYNC_ORDER = {
 			console.error("parseHistoryListPage 오류:", e);
 		}
 	},
+	/**
+	 * Pc 버전 화면 order 헤더 크롤링
+	 * @param {dom} orderItem jquery obj
+	 */
 	parseOrderItemForPc: async function(orderItem) {
 		let attr = "data-href";
 		let orderValue = {};
@@ -121,10 +144,10 @@ var SYNC_ORDER = {
 		//주문시간
 		let tdList = $(orderItem).find("td");
 		let orderDttm = tdList[0].innerText;
-		orderValue.order_dttm = moment(UTIL.toString(UTIL.getNumber(orderDttm)), "YYYYMMDDHHmm").toDate();
+		orderValue.order_dttm = dayjs(UTIL.toString(UTIL.getNumber(orderDttm)), "YYYYMMDDHHmm").toDate();
 //				let dtStr = orderDttm.match(/\d{4}\.\d{2}\.\d{2}/).toString();
 //				let tmStr = orderDttm.match(/\d{2}:\d{2}/).toString();
-//				orderValue.order_dttm = moment(dtStr+" "+tmStr, "YYYY.MM.DD HH:mm").toDate();
+//				orderValue.order_dttm = dayjs(dtStr+" "+tmStr, "YYYY.MM.DD HH:mm").toDate();
 //				orderValue.order_dt = dtStr.replaceAll(".","");
 
 		//구매/대여 구분
@@ -138,6 +161,10 @@ var SYNC_ORDER = {
 
 		return orderValue;
 	},
+	/**
+	 * 모바일 버전 화면 order 헤더 크롤링
+	 * @param {dom} orderItem jquery obj
+	 */
 	parseOrderItemForMobile: async function(orderItem) {
 		let orderValue = {};
 
@@ -148,7 +175,7 @@ var SYNC_ORDER = {
 
 		//주문시간
 		let orderDttm = $(orderItem).find("header").first().text();
-		orderValue.order_dttm = moment(UTIL.toString(UTIL.getNumber(orderDttm)), "YYYYMMDDHHmm").toDate();
+		orderValue.order_dttm = dayjs(UTIL.toString(UTIL.getNumber(orderDttm)), "YYYYMMDDHHmm").toDate();
 
 		//구매/대여 구분
 		let orderType = $(orderItem).find("title").first().text();
@@ -161,9 +188,10 @@ var SYNC_ORDER = {
 
 		return orderValue;
 	},
-	/*
-	param pageIdx 크롤링할 주문내역 페이지 번호
-	*/
+	/**
+	 * 주문번호 상세 내역 크롤링
+	 * @param {number|string} orderNo 결제내역 상세페이지 크롤링할 주문번호
+	 */
 	parseHistoryDetailPage: async function(orderNo) {
 		try {
 			if(UTIL.isEmpty(orderNo)) return;
@@ -184,6 +212,11 @@ var SYNC_ORDER = {
 			console.error("parseHistoryDetailPage 오류:", e);
 		}
 	},
+
+	/**
+	 * Pc 버전 화면 order 상세 크롤링
+	 * @param {dom} htmlDOM jquery obj
+	 */
 	parseHistoryItemForPc: async function(htmlDOM) {
 		let sectionElement = $(htmlDOM).find(".buy_history_detail_table");
 
@@ -217,8 +250,32 @@ var SYNC_ORDER = {
 
 		return orderHeaderItem;
 	},
+	/**
+	 * 특정 라벨을 가지고 있는 th 다음에 있는 td
+	 * @param {dom} bodyE table 있는 dom
+	 * @param {string} thTxt th에 있는 라벨
+	 * @returns td dom
+	 */
+	findNextTdByThTxt: function(bodyE, thTxt) {
+		return $(bodyE).find("th").filter(function() {return $(this).text().trim() === thTxt;}).next("td");
+	},
+	/**
+	 * 특정 라벨을 가지고 있는 th 기준으로 금액 데이터에서 숫자만 추출
+	 * @param {dom} bodyE table 있는 dom
+	 * @param {string} thLabel 금액 데이터 있는 th 라벨
+	 * @returns number amt
+	 */
+	getAmt: function(bodyE, thLabel) {
+		return UTIL.getNumber(SYNC_ORDER.findNextTdByThTxt(bodyE, thLabel).find("span.museo_sans").text());
+	},
+
+	/**
+	 * 모바일 버전 화면 order 상세 크롤링
+	 * 뿌려주는 데이터 양이 Pc보다 적어서 일단 개발 중지하고 무조건 pc버전으로 크롤링하게 작업
+	 * @param {dom} htmlDOM jquery obj
+	 */
 	parseHistoryItemForMobile: async function(htmlDOM, orderNo) {
-		//TODO book_id별 가격은 영수증까지 가져와야 함
+		//TO DO book_id별 가격은 영수증까지 가져와야 함
 		//2024123090746511
 		let sectionElement = $(htmlDOM).find("section.page_buy_history_detail");
 
@@ -267,13 +324,6 @@ var SYNC_ORDER = {
 		let titE = SYNC_ORDER.findHistoryValueForMobile(bodyE, titLabel);
 		if(UTIL.isEmpty(titE)) return null;
 		return UTIL.getNumber(titE.next("span").find("span.museo_sans").text());
-	},
-
-	findNextTdByThTxt: function(bodyE, thTxt) {
-		return $(bodyE).find("th").filter(function() {return $(this).text().trim() === thTxt;}).next("td");
-	},
-	getAmt: function(bodyE, thLabel) {
-		return UTIL.getNumber(SYNC_ORDER.findNextTdByThTxt(bodyE, thLabel).find("span.museo_sans").text());
 	}
 };
 export default SYNC_ORDER;

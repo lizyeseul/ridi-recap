@@ -1,3 +1,5 @@
+import UTIL from "@/scripts/utils.js";
+
 const categoryInfo = {
 	"books": [
 		{
@@ -2801,5 +2803,5 @@ export const categoryFlatInfo = {
 };
 
 export default function getCtgrNm(id) {
-	return this.categoryFlatInfo.get(UTIL.toString(id)).title;
+	return categoryFlatInfo[UTIL.toString(id)].title;
 };

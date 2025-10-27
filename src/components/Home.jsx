@@ -20,24 +20,24 @@ function Home() {
 
   return (
 	<div>
-	  <button onClick={() => navigate("/Home")}>Home</button>
-	  <button onClick={() => navigate("/Home/Setting")}>Setting</button>
+	  <button onClick={() => navigate("")}>Home</button>
+	  <button onClick={() => navigate("Setting")}>Setting</button>
 	  <hr />
 	  <Routes>
 		<Route
-		  path="/Home"
+		  path="/"
 		  element={
 			<div>
-			  <button onClick={() => navigate("/Home/order")}>order</button>
-			  <button onClick={() => navigate("/Home/book")}>book</button>
-			  <button onClick={() => navigate("/Home/purchase")}>purchase</button>
+			  <button onClick={() => navigate("order")}>order</button>
+			  <button onClick={() => navigate("book")}>book</button>
+			  <button onClick={() => navigate("purchase")}>purchase</button>
 			</div>
 		  }
 		/>
-		<Route path="/Home/Setting" element={<Setting />} />
-		<Route path="/Home/order" element={<Order />} />
-		<Route path="/Home/book" element={<Book />} />
-		<Route path="/Home/purchase" element={<Purchase />} />
+		<Route path="Setting" element={<Setting />} />
+		<Route path="order" element={<Order />} />
+		<Route path="book" element={<Book />} />
+		<Route path="purchase" element={<Purchase />} />
 	  </Routes>
 	</div>
   );

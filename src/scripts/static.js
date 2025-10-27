@@ -1,4 +1,4 @@
-export const URL = {
+const URL = {
 	"base": "https://ridibooks.com",
 
 	"account": "/account/myridi",
@@ -9,7 +9,7 @@ export const URL = {
 	"LIBRARY_BASE": "https://library-api.ridibooks.com/",
 	"BOOK_API_BASE": "https://book-api.ridibooks.com/"
 };
-export const parser = new DOMParser();
+const parser = new DOMParser();
 //            e.Z = {
 //                ACCOUNT_BASE_URL: "https://account.ridibooks.com/",
 //                API_BASE_URL: "https://api.ridibooks.com/",
@@ -33,3 +33,5 @@ export const parser = new DOMParser();
 //                STORE_BASE_URL: "https://ridibooks.com/",
 //                VIEWER_API_BASE_URL: "https://ridibooks.com/"
 //            }
+
+export { URL, parser };

@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 const DB_INFO = {
 	name: "RIDI TEST",
 	version: 1
@@ -105,7 +106,7 @@ var DB = {
 					}
 					if(existsFilter) {
 						for (const key in existsFilter) {
-							if(!cursor.value.hasOwnProperty(filter[key])) {
+							if(!cursor.value.hasOwnProperty(existsFilter[key])) {
 								includeFlag = false;
 								break;
 							}
@@ -113,7 +114,7 @@ var DB = {
 					}
 					if(notExistsFilter) {
 						for (const key in notExistsFilter) {
-							if(cursor.value.hasOwnProperty(filter[key])) {
+							if(cursor.value.hasOwnProperty(notExistsFilter[key])) {
 								includeFlag = false;
 								break;
 							}
@@ -190,7 +191,7 @@ var DB = {
 		var cursorRequest = store.openCursor(key);
 		cursorRequest.onsuccess = function(e) {
 			var cursor = e.target.result;
-			data.last_update_dttm = moment().toDate();
+			data.last_update_dttm = dayjs().toDate();
 			if(cursor) {
 				var updateData = data;
 				if(mode == "update") {

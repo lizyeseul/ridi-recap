@@ -1,5 +1,6 @@
 import UTIL from "@/scripts/utils.js"
 import { URL, parser } from "@/scripts/static.js"
+import $ from 'jquery';
 
 var SESSION = {
 	setRidiGlobalVal: async function() {

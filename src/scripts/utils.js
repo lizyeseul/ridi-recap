@@ -52,9 +52,9 @@ const UTIL = {
 
 	request: function(callUrl, body, options) {
 		//TEMP
-		callUrl = callUrl.replaceAll("https://ridibooks.com","/base_url");
-		callUrl = callUrl.replaceAll("https://library-api.ridibooks.com/","/library_api");
-		callUrl = callUrl.replaceAll("https://book-api.ridibooks.com/","/book_api");
+		// callUrl = callUrl.replaceAll("https://ridibooks.com","/base_url");
+		// callUrl = callUrl.replaceAll("https://library-api.ridibooks.com/","/library_api");
+		// callUrl = callUrl.replaceAll("https://book-api.ridibooks.com/","/book_api");
 		//TEMP END
 
 		var optionObj = options || {};
