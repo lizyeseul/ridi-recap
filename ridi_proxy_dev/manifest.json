@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ridi-proxy-dev",
+  "version": "0.0.1",
+  "permissions": [],
+  "host_permissions": [
+	"https://ridibooks.com/*",
+	"https://library-api.ridibooks.com/*",
+	"https://book-api.ridibooks.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost:5173/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

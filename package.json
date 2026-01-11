@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "clean": "rimraf dist",
     "build": "vite build",
+    "build:dev": "npm run build -- --mode development",
     "build:clean": "npm run clean && npm run build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "clean": "rimraf dist",
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
     "dayjs": "^1.11.18",
@@ -21,7 +22,7 @@
   "devDependencies": {
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react-swc": "^4.0.0",
+    "@vitejs/plugin-react": "^5.1.1",
     "globals": "^16.3.0",
     "rimraf": "^6.0.1",
     "vite": "^7.1.2"
