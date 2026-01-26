@@ -2,7 +2,6 @@
 
 function request(callUrl, body, option) {
   option = option || {};
-console.log("[BG] service worker loaded", callUrl);
   return new Promise(function (resolve, reject) {
     _request(callUrl, body, function (response) {
       response && response.success

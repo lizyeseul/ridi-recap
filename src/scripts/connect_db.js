@@ -186,28 +186,44 @@ var DB = {
 	@param mode string 'reset':기존 value 무시하고 data로 set, 'update':기존 value에 data assign
 	*/
 	updateData: function(tbNm, key, data, mode) {
-		mode = mode || "reset";
-		var store = DB.getObjectStore(tbNm,"readwrite");
-		var cursorRequest = store.openCursor(key);
-		cursorRequest.onsuccess = function(e) {
-			var cursor = e.target.result;
-			data.last_update_dttm = dayjs().toDate();
-			if(cursor) {
-				var updateData = data;
-				if(mode == "update") {
-					var cursorValue = cursor.value;
-					updateData = Object.assign(cursorValue, data);
+		return new Promise((resolve, reject) => {
+			mode = mode || "reset";
+			var store = DB.getObjectStore(tbNm,"readwrite");
+			var cursorRequest = store.openCursor(key);
+			cursorRequest.onsuccess = function(e) {
+				var cursor = e.target.result;
+				data.last_update_dttm = dayjs().toDate();
+				var req;
+				if(cursor) {
+					var updateData = data;
+					if(mode == "update") {
+						var cursorValue = cursor.value;
+						updateData = Object.assign(cursorValue, data);
+					}
+					console.debug("update: ",tbNm,key,updateData);
+					req = cursor.update(updateData);
 				}
-				console.debug("update: ",tbNm,key,updateData);
-				cursor.update(updateData);
+				else {
+					console.debug("insert: ",tbNm,key,data);
+					req = store.add(data, key);
+				}
+				req.onsuccess = function(e) {
+					resolve(true);
+				};
+				req.onerror = function(e) {
+					console.error("데이터 저장 오류-updateData: "+e.target.error);
+					reject(e.target.error);
+				};
 			}
-			else {
-				console.debug("insert: ",tbNm,key,data);
-				store.add(data, key);
-			}
-		}
-		store.onerror = (e) => {console.error("store 요청 오류-updateData: "+e.target.error)};
-		cursorRequest.onerror = (e) => {console.error("커서 요청 오류-updateData: "+e.target.error)};
+			store.onerror = (e) => {
+				console.error("store 요청 오류-updateData: "+e.target.error);
+				reject(e.target.error);
+			};
+			cursorRequest.onerror = (e) => {
+				console.error("커서 요청 오류-updateData: "+e.target.error);
+				reject(e.target.error);
+			};
+		});
 	},
 	deleteData: function(tbNm, key) {
 		var store = DB.getObjectStore(tbNm,"readwrite");

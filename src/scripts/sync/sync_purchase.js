@@ -17,7 +17,7 @@ var SYNC_PURCHASE = {
 			if(orderData == null) continue;
 			let bookList = orderData.book_list;
 			for(let bookId of Object.keys(bookList)) {
-				if(bookId != 111043064) continue;
+				// if(bookId != 111043064) continue;
 				let bookData = await DB.getUniqueValue("store_book", "book_id", UTIL.toNumber(bookId));
 				let unitData = await DB.getUniqueValue("store_unit", "unit_id", UTIL.toNumber(bookData.unit_id));
 

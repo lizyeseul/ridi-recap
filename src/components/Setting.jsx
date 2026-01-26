@@ -39,14 +39,14 @@ function Setting() {
 			<hr/>
 			<span>{isSync? 'sync '+ingPage : 'end'}</span><br/>
 			<div>
-				<button onClick={syncOrderAll} disabled={isSync}>결제내역 전체</button>
-				<button onClick={syncOrderRecent} disabled={isSync}>결제내역</button>
+				<button onClick={syncOrderAll} disabled={isSync}>결제내역 전체</button><span>: 주문내역 목록 전체 업데이트</span><br/>
+				<button onClick={syncOrderRecent} disabled={isSync}>결제내역</button><span>: 현재 DB count 비교해서 최근 주문내역 업데이트</span>
 			</div>
 			<hr/>
 			<div>
 				<span>책 정보 업데이트</span><br/>
-				<button onClick={syncLib} disabled={isSync}>서재 목록</button>
-				<button onClick={syncBookAllByUnit} disabled={isSync}>표지 기준</button>
+				<button onClick={syncLib} disabled={isSync}>서재 목록</button><span>: 서재에 있는 책 목록 = unit</span><br/>
+				<button onClick={syncBookAllByUnit} disabled={isSync}>표지 기준</button><span>: unit 목록 기준으로 book 업데이트</span>
 			</div>
 		</div>
 	);

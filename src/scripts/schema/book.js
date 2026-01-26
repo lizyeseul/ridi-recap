@@ -33,15 +33,15 @@ export default class bookClass {
 			category_label: this.g_category_label,
 
 			title: this.title,
-			full_title: this.g_title,
-			sub_title: this.g_sub_title,
+			title_full: this.g_title,
+			title_sub: this.g_sub_title,
 
 			thumbnail: this.thumbnail,
 
 			file: this.file,
 			file_size: this.file.size,
-			character_count: this.file.character_count,
-			page_count: this.file.page_count,
+			count_character: this.file.character_count,
+			count_page: this.file.page_count,
 
 			price_info: this.price_info,
 

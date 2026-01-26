@@ -15,10 +15,10 @@ var SYNC_BOOK = {
 			var res = await UTIL.request(URL.LIBRARY_BASE+"items/main/?offset=0&limit="+unitCnt, null, { isResultJson: true });
 
 			var items = res.items;
-			items.forEach(function(unit) {
+			for (const unit of items) {
 				unit.unit_id = UTIL.toNumber(unit.unit_id);
-				DB.updateData("store_unit", unit.unit_id, unit, "update");
-			});
+				await DB.updateData("store_unit", unit.unit_id, unit, "update");
+			};
 			return true;
 		}
 		catch(e) {
@@ -26,10 +26,10 @@ var SYNC_BOOK = {
 		}
 	},
 	/**
-	 * store_unit에서 unit_id값이 없는 경우 찾아서 store_book 업데이트
+	 * store_unit에서 unit_id 전체 찾아서 store_book 업데이트
 	 */
 	syncBookAllByUnit: async function() {
-		let unitList = await DB.getValueByIdx("store_unit", "unit_id", null);
+		let unitList = await DB.getValueByIdx("store_unit", "unit_id", null);	//select * from store_unit
 		await SYNC_BOOK.syncBookByUnitId(unitList.map((u) => UTIL.toString(u.unit_id)));	//TODO end 기준이 네트워크 조회 끝날 때로 되어 있는 듯, db insert까지로 확인 필요
 	},
 	syncBookRecent: async function() {
@@ -108,7 +108,7 @@ var SYNC_BOOK = {
 				var other = purchaseMap.get(UTIL.toNumber(item.id));
 				return other ? {...item, ...other} : item;
 			});
-			mergedList.forEach(async function(bookInfo) {
+			for (const bookInfo of mergedList) {
 				let bookUnitId = unitId; //TEST
 				let bookId = UTIL.toNumber(bookInfo.id);
 				if(UTIL.isEmpty(bookUnitId)) {
@@ -128,8 +128,8 @@ var SYNC_BOOK = {
 				}
 				bookInfo.book_id = bookId;
 				bookInfo.unit_id = bookUnitId;
-				DB.updateData("store_book", bookInfo.book_id, bookInfo, "update");
-			});
+				await DB.updateData("store_book", bookInfo.book_id, bookInfo, "update");
+			};
 		}
 	},
 	/**
