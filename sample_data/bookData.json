@@ -1,0 +1,1073 @@
+[
+  {
+    "book_id": 111042636,
+    "unit_id": 2114056,
+    "last_update_dttm": "2026-01-25T11:52:20.449Z",
+    "id": "111042636",
+    "title": {
+      "main": "<패션 : 라가(Raga)> 세트",
+      "prefix": "[e북]"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/111042636/small#1",
+      "large": "https://img.ridicdn.net/cover/111042636/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/111042636/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 92600,
+        "name": "유우지",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 4101,
+        "name": "현대물",
+        "genre": "romance",
+        "sub_genre": "bl_novel",
+        "is_series_category": true,
+        "ancestor_ids": [4100, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 5000,
+        "price": 5000,
+        "discount_percentage": 0
+      }
+    },
+    "setbook": {
+      "member_books_count": 2
+    },
+    "file": {
+      "size": 426,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 426
+        }
+      ],
+      "is_comic": false,
+      "is_manga": false
+    },
+    "property": {
+      "is_adult_only": true,
+      "is_magazine": false,
+      "is_new_book": false,
+      "is_novel": true,
+      "is_open": false,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "3086000523",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2019-03-22T00:00:00+09:00",
+      "ridibooks_publish": "2022-12-20T00:07:07+09:00",
+      "ridibooks_register": "2022-12-15T16:01:16+09:00"
+    },
+    "publisher": {
+      "id": 111,
+      "name": "더클북컴퍼니",
+      "cp_name": "리디"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": false
+    },
+    "service_type": "none"
+  },
+  {
+    "book_id": 2378080496,
+    "unit_id": 7778741,
+    "last_update_dttm": "2026-03-04T15:04:27.773Z",
+    "id": "2378080496",
+    "title": {
+      "main": "블랙배저 17권",
+      "prefix": "[e북]"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/2378080496/small#1",
+      "large": "https://img.ridicdn.net/cover/2378080496/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/2378080496/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 162164,
+        "name": "썬터다운",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1712,
+        "name": "퓨전 판타지",
+        "genre": "fantasy",
+        "sub_genre": "fantasy",
+        "is_series_category": true,
+        "ancestor_ids": [1710, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 3200,
+        "price": 3200,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "2378077912",
+      "volume": 17,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": false,
+        "is_serial": false,
+        "is_serial_complete": false,
+        "is_wait_free": false,
+        "last_volume_id": "2378080501",
+        "opened_book_count": 22,
+        "opened_last_volume_id": "2378080501",
+        "title": "블랙배저",
+        "total_book_count": 22,
+        "unit": "권",
+        "prev_books": {
+          "2378079001": {
+            "b_id": "2378079001",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        },
+        "next_books": {
+          "2378080497": {
+            "b_id": "2378080497",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 22,
+          "free_book_count": 1,
+          "regular_price": 67200,
+          "price": 67200,
+          "discount_percentage": 0
+        }
+      }
+    },
+    "file": {
+      "size": 7872,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 7872
+        }
+      ],
+      "format": "epub",
+      "is_comic": false,
+      "is_manga": false,
+      "character_count": 122160
+    },
+    "property": {
+      "is_adult_only": false,
+      "is_magazine": false,
+      "is_new_book": true,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "2378077912",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2026-02-14T00:00:00+09:00",
+      "ridibooks_publish": "2026-02-14T00:01:21+09:00",
+      "ridibooks_register": "2026-02-10T10:59:19+09:00"
+    },
+    "publisher": {
+      "id": 2378,
+      "name": "매드햇",
+      "cp_name": "주식회사 스토린랩_E/P"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": false
+    },
+    "service_type": "normal",
+    "b_id": "2378080496",
+    "display_order": 17,
+    "display_title": "블랙배저",
+    "display_type": "series",
+    "display_unit_id": 7778741,
+    "expire_date": "9999-12-31T23:59:59+09:00",
+    "hidden": false,
+    "is_deleted": false,
+    "purchase_date": "2026-02-14T01:12:31+09:00",
+    "remain_time": "",
+    "search_order": 17,
+    "search_title": "블랙배저",
+    "search_type": "series",
+    "search_unit_id": 7778741
+  },
+  {
+    "book_id": 2378080497,
+    "unit_id": 7778741,
+    "last_update_dttm": "2026-03-04T15:04:27.774Z",
+    "id": "2378080497",
+    "title": {
+      "main": "블랙배저 18권",
+      "prefix": "[e북]"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/2378080497/small#1",
+      "large": "https://img.ridicdn.net/cover/2378080497/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/2378080497/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 162164,
+        "name": "썬터다운",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1712,
+        "name": "퓨전 판타지",
+        "genre": "fantasy",
+        "sub_genre": "fantasy",
+        "is_series_category": true,
+        "ancestor_ids": [1710, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 3200,
+        "price": 3200,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "2378077912",
+      "volume": 18,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": false,
+        "is_serial": false,
+        "is_serial_complete": false,
+        "is_wait_free": false,
+        "last_volume_id": "2378080501",
+        "opened_book_count": 22,
+        "opened_last_volume_id": "2378080501",
+        "title": "블랙배저",
+        "total_book_count": 22,
+        "unit": "권",
+        "prev_books": {
+          "2378080496": {
+            "b_id": "2378080496",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        },
+        "next_books": {
+          "2378080498": {
+            "b_id": "2378080498",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 22,
+          "free_book_count": 1,
+          "regular_price": 67200,
+          "price": 67200,
+          "discount_percentage": 0
+        }
+      }
+    },
+    "file": {
+      "size": 8724,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 8724
+        }
+      ],
+      "format": "epub",
+      "is_comic": false,
+      "is_manga": false,
+      "character_count": 126001
+    },
+    "property": {
+      "is_adult_only": false,
+      "is_magazine": false,
+      "is_new_book": true,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "2378077912",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2026-02-14T00:00:00+09:00",
+      "ridibooks_publish": "2026-02-14T00:01:24+09:00",
+      "ridibooks_register": "2026-02-10T11:00:06+09:00"
+    },
+    "publisher": {
+      "id": 2378,
+      "name": "매드햇",
+      "cp_name": "주식회사 스토린랩_E/P"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": false
+    },
+    "service_type": "normal",
+    "b_id": "2378080497",
+    "display_order": 18,
+    "display_title": "블랙배저",
+    "display_type": "series",
+    "display_unit_id": 7778741,
+    "expire_date": "9999-12-31T23:59:59+09:00",
+    "hidden": false,
+    "is_deleted": false,
+    "purchase_date": "2026-02-14T01:12:31+09:00",
+    "remain_time": "",
+    "search_order": 18,
+    "search_title": "블랙배저",
+    "search_type": "series",
+    "search_unit_id": 7778741
+  },
+  {
+    "book_id": 2378080498,
+    "unit_id": 7778741,
+    "last_update_dttm": "2026-03-04T15:04:27.774Z",
+    "id": "2378080498",
+    "title": {
+      "main": "블랙배저 19권",
+      "prefix": "[e북]"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/2378080498/small#1",
+      "large": "https://img.ridicdn.net/cover/2378080498/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/2378080498/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 162164,
+        "name": "썬터다운",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1712,
+        "name": "퓨전 판타지",
+        "genre": "fantasy",
+        "sub_genre": "fantasy",
+        "is_series_category": true,
+        "ancestor_ids": [1710, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 3200,
+        "price": 3200,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "2378077912",
+      "volume": 19,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": false,
+        "is_serial": false,
+        "is_serial_complete": false,
+        "is_wait_free": false,
+        "last_volume_id": "2378080501",
+        "opened_book_count": 22,
+        "opened_last_volume_id": "2378080501",
+        "title": "블랙배저",
+        "total_book_count": 22,
+        "unit": "권",
+        "prev_books": {
+          "2378080497": {
+            "b_id": "2378080497",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        },
+        "next_books": {
+          "2378080499": {
+            "b_id": "2378080499",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 22,
+          "free_book_count": 1,
+          "regular_price": 67200,
+          "price": 67200,
+          "discount_percentage": 0
+        }
+      }
+    },
+    "file": {
+      "size": 8688,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 8688
+        }
+      ],
+      "format": "epub",
+      "is_comic": false,
+      "is_manga": false,
+      "character_count": 107983
+    },
+    "property": {
+      "is_adult_only": false,
+      "is_magazine": false,
+      "is_new_book": true,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "2378077912",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2026-02-14T00:00:00+09:00",
+      "ridibooks_publish": "2026-02-14T00:01:27+09:00",
+      "ridibooks_register": "2026-02-10T11:02:54+09:00"
+    },
+    "publisher": {
+      "id": 2378,
+      "name": "매드햇",
+      "cp_name": "주식회사 스토린랩_E/P"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": false
+    },
+    "service_type": "normal",
+    "b_id": "2378080498",
+    "display_order": 19,
+    "display_title": "블랙배저",
+    "display_type": "series",
+    "display_unit_id": 7778741,
+    "expire_date": "9999-12-31T23:59:59+09:00",
+    "hidden": false,
+    "is_deleted": false,
+    "purchase_date": "2026-02-14T01:12:31+09:00",
+    "remain_time": "",
+    "search_order": 19,
+    "search_title": "블랙배저",
+    "search_type": "series",
+    "search_unit_id": 7778741
+  },
+  {
+    "id": "4928004728",
+    "title": {
+      "main": "솔티 러스트 후기"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/4928004728/small#1",
+      "large": "https://img.ridicdn.net/cover/4928004728/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/4928004728/xxlarge#1"
+    },
+    "serial_thumbnail": {
+      "small": "https://img.ridicdn.net/thumbnail/4928004728/small",
+      "large": "https://img.ridicdn.net/thumbnail/4928004728/large",
+      "xxlarge": "https://img.ridicdn.net/thumbnail/4928004728/xxlarge"
+    },
+    "authors": [
+      {
+        "id": 134541,
+        "name": "이문치",
+        "role": "illustrator"
+      },
+      {
+        "id": 115689,
+        "name": "뛰뛰빵빵",
+        "role": "story_writer"
+      },
+      {
+        "id": 18735,
+        "name": "Tropicalarmpit",
+        "role": "original_author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 4251,
+        "name": "BL 웹툰",
+        "genre": "comic",
+        "sub_genre": "bl_webtoon",
+        "is_series_category": true,
+        "ancestor_ids": [4250, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 0,
+        "price": 0,
+        "discount_percentage": 0
+      },
+      "rent": {
+        "regular_price": 0,
+        "price": 0,
+        "rent_days": 3,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "4928000874",
+      "volume": 116,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": true,
+        "is_serial": true,
+        "is_serial_complete": true,
+        "is_wait_free": false,
+        "last_volume_id": "4928004728",
+        "opened_book_count": 116,
+        "opened_last_volume_id": "4928004728",
+        "title": "솔티 러스트",
+        "total_book_count": 116,
+        "unit": "화",
+        "prev_books": {
+          "4928004685": {
+            "b_id": "4928004685",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 116,
+          "free_book_count": 1,
+          "regular_price": 57500,
+          "price": 57500,
+          "discount_percentage": 0
+        },
+        "rent": {
+          "total_book_count": 116,
+          "free_book_count": 3,
+          "regular_price": 33900,
+          "rent_price": 33900,
+          "discount_percentage": 0,
+          "rent_days": 3
+        }
+      }
+    },
+    "file": {
+      "size": 3797,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": true,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 3797
+        }
+      ],
+      "format": "webtoon",
+      "is_comic": true,
+      "is_manga": false,
+      "page_count": 22
+    },
+    "property": {
+      "is_adult_only": true,
+      "is_magazine": false,
+      "is_new_book": false,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "4928000874",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2025-11-21T00:00:00+09:00",
+      "ridibooks_publish": "2025-11-20T21:59:03+09:00",
+      "ridibooks_register": "2025-11-17T16:27:01+09:00"
+    },
+    "publisher": {
+      "id": 4928,
+      "name": "스튜디오 얼라이브",
+      "cp_name": "주식회사 리버스_JPG"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": false,
+      "mac": false,
+      "windows": false,
+      "web_viewer": true
+    },
+    "service_type": "none",
+    "book_id": 4928004728,
+    "unit_id": 5207257,
+    "last_update_dttm": "2026-01-26T13:31:35.587Z"
+  },
+  {
+    "book_id": 6028000001,
+    "unit_id": 7644624,
+    "last_update_dttm": "2026-03-04T15:12:14.856Z",
+    "id": "6028000001",
+    "title": {
+      "main": "포스터가 36번지에는 괴물이 산다 1화"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/6028000001/small#1",
+      "large": "https://img.ridicdn.net/cover/6028000001/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/6028000001/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 138716,
+        "name": "인간추출기",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1752,
+        "name": "퓨전 판타지",
+        "genre": "fantasy",
+        "sub_genre": "fantasy_serial",
+        "is_series_category": true,
+        "ancestor_ids": [1750, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 0,
+        "price": 0,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "6028000001",
+      "volume": 1,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": true,
+        "is_serial": true,
+        "is_serial_complete": true,
+        "is_wait_free": true,
+        "last_volume_id": "6028000255",
+        "opened_book_count": 251,
+        "opened_last_volume_id": "6028000255",
+        "title": "포스터가 36번지에는 괴물이 산다",
+        "total_book_count": 251,
+        "unit": "화",
+        "next_books": {
+          "6028000002": {
+            "b_id": "6028000002",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 251,
+          "free_book_count": 26,
+          "regular_price": 22500,
+          "price": 22500,
+          "discount_percentage": 0
+        }
+      }
+    },
+    "file": {
+      "size": 630,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 630
+        }
+      ],
+      "format": "epub",
+      "is_comic": false,
+      "is_manga": false,
+      "character_count": 5703
+    },
+    "property": {
+      "is_adult_only": false,
+      "is_magazine": false,
+      "is_new_book": false,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2025-07-24T00:00:00+09:00",
+      "ridibooks_publish": "2025-08-01T00:03:47+09:00",
+      "ridibooks_register": "2025-07-24T12:48:22+09:00"
+    },
+    "publisher": {
+      "id": 6028,
+      "name": "익시드",
+      "cp_name": "류다영(인간추출기)_개인_IAP_익시드"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": true
+    },
+    "service_type": "normal",
+    "b_id": "6028000001",
+    "display_order": 1,
+    "display_title": "포스터가 36번지에는 괴물이 산다",
+    "display_type": "series",
+    "display_unit_id": 7644624,
+    "expire_date": "9999-12-31T23:59:59+09:00",
+    "hidden": false,
+    "is_deleted": false,
+    "purchase_date": "2026-02-26T21:00:53+09:00",
+    "remain_time": "",
+    "search_order": 1,
+    "search_title": "포스터가 36번지에는 괴물이 산다",
+    "search_type": "series",
+    "search_unit_id": 7644624
+  },
+  {
+    "book_id": 6028000002,
+    "unit_id": 7644624,
+    "last_update_dttm": "2026-03-04T15:12:14.858Z",
+    "id": "6028000002",
+    "title": {
+      "main": "포스터가 36번지에는 괴물이 산다 2화"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/6028000002/small#1",
+      "large": "https://img.ridicdn.net/cover/6028000002/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/6028000002/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 138716,
+        "name": "인간추출기",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1752,
+        "name": "퓨전 판타지",
+        "genre": "fantasy",
+        "sub_genre": "fantasy_serial",
+        "is_series_category": true,
+        "ancestor_ids": [1750, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 0,
+        "price": 0,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "6028000001",
+      "volume": 2,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": true,
+        "is_serial": true,
+        "is_serial_complete": true,
+        "is_wait_free": true,
+        "last_volume_id": "6028000255",
+        "opened_book_count": 251,
+        "opened_last_volume_id": "6028000255",
+        "title": "포스터가 36번지에는 괴물이 산다",
+        "total_book_count": 251,
+        "unit": "화",
+        "prev_books": {
+          "6028000001": {
+            "b_id": "6028000001",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        },
+        "next_books": {
+          "6028000003": {
+            "b_id": "6028000003",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 251,
+          "free_book_count": 26,
+          "regular_price": 22500,
+          "price": 22500,
+          "discount_percentage": 0
+        }
+      }
+    },
+    "file": {
+      "size": 757,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 757
+        }
+      ],
+      "format": "epub",
+      "is_comic": false,
+      "is_manga": false,
+      "character_count": 4459
+    },
+    "property": {
+      "is_adult_only": false,
+      "is_magazine": false,
+      "is_new_book": false,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "6028000001",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2025-08-01T00:00:00+09:00",
+      "ridibooks_publish": "2025-08-01T00:03:47+09:00",
+      "ridibooks_register": "2025-07-28T18:43:57+09:00"
+    },
+    "publisher": {
+      "id": 6028,
+      "name": "익시드",
+      "cp_name": "류다영(인간추출기)_개인_IAP_익시드"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": true
+    },
+    "service_type": "normal",
+    "b_id": "6028000002",
+    "display_order": 2,
+    "display_title": "포스터가 36번지에는 괴물이 산다",
+    "display_type": "series",
+    "display_unit_id": 7644624,
+    "expire_date": "9999-12-31T23:59:59+09:00",
+    "hidden": false,
+    "is_deleted": false,
+    "purchase_date": "2026-02-26T21:00:53+09:00",
+    "remain_time": "",
+    "search_order": 2,
+    "search_title": "포스터가 36번지에는 괴물이 산다",
+    "search_type": "series",
+    "search_unit_id": 7644624
+  },
+  {
+    "book_id": 6028000003,
+    "unit_id": 7644624,
+    "last_update_dttm": "2026-03-04T15:12:14.859Z",
+    "id": "6028000003",
+    "title": {
+      "main": "포스터가 36번지에는 괴물이 산다 3화"
+    },
+    "thumbnail": {
+      "small": "https://img.ridicdn.net/cover/6028000003/small#1",
+      "large": "https://img.ridicdn.net/cover/6028000003/large#1",
+      "xxlarge": "https://img.ridicdn.net/cover/6028000003/xxlarge#1"
+    },
+    "authors": [
+      {
+        "id": 138716,
+        "name": "인간추출기",
+        "role": "author"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1752,
+        "name": "퓨전 판타지",
+        "genre": "fantasy",
+        "sub_genre": "fantasy_serial",
+        "is_series_category": true,
+        "ancestor_ids": [1750, 0]
+      }
+    ],
+    "price_info": {
+      "buy": {
+        "regular_price": 0,
+        "price": 0,
+        "discount_percentage": 0
+      }
+    },
+    "series": {
+      "id": "6028000001",
+      "volume": 3,
+      "property": {
+        "is_comic_hd": false,
+        "is_completed": true,
+        "is_serial": true,
+        "is_serial_complete": true,
+        "is_wait_free": true,
+        "last_volume_id": "6028000255",
+        "opened_book_count": 251,
+        "opened_last_volume_id": "6028000255",
+        "title": "포스터가 36번지에는 괴물이 산다",
+        "total_book_count": 251,
+        "unit": "화",
+        "prev_books": {
+          "6028000002": {
+            "b_id": "6028000002",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        },
+        "next_books": {
+          "6028000004": {
+            "b_id": "6028000004",
+            "is_opened": true,
+            "use_free_serial_schedule": false
+          }
+        }
+      },
+      "price_info": {
+        "buy": {
+          "total_book_count": 251,
+          "free_book_count": 26,
+          "regular_price": 22500,
+          "price": 22500,
+          "discount_percentage": 0
+        }
+      }
+    },
+    "file": {
+      "size": 756,
+      "is_comic_hd": false,
+      "is_drm_free": false,
+      "is_webtoon": false,
+      "variants": [
+        {
+          "quality": "recommended",
+          "size": 756
+        }
+      ],
+      "format": "epub",
+      "is_comic": false,
+      "is_manga": false,
+      "character_count": 4117
+    },
+    "property": {
+      "is_adult_only": false,
+      "is_magazine": false,
+      "is_new_book": false,
+      "is_novel": false,
+      "is_open": true,
+      "is_somedeal": false,
+      "is_trial": false,
+      "is_wait_free": false,
+      "review_display_id": "6028000001",
+      "use_free_serial_schedule": false,
+      "preview_rate": 0
+    },
+    "publish": {
+      "ebook_publish": "2025-08-01T00:00:00+09:00",
+      "ridibooks_publish": "2025-08-01T00:03:48+09:00",
+      "ridibooks_register": "2025-07-28T18:43:58+09:00"
+    },
+    "publisher": {
+      "id": 6028,
+      "name": "익시드",
+      "cp_name": "류다영(인간추출기)_개인_IAP_익시드"
+    },
+    "support": {
+      "android": true,
+      "ios": true,
+      "paper": true,
+      "mac": true,
+      "windows": true,
+      "web_viewer": true
+    },
+    "service_type": "normal",
+    "b_id": "6028000003",
+    "display_order": 3,
+    "display_title": "포스터가 36번지에는 괴물이 산다",
+    "display_type": "series",
+    "display_unit_id": 7644624,
+    "expire_date": "9999-12-31T23:59:59+09:00",
+    "hidden": false,
+    "is_deleted": false,
+    "purchase_date": "2026-02-26T21:00:53+09:00",
+    "remain_time": "",
+    "search_order": 3,
+    "search_title": "포스터가 36번지에는 괴물이 산다",
+    "search_type": "series",
+    "search_unit_id": 7644624
+  }
+]
