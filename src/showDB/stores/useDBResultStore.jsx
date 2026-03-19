@@ -1,4 +1,4 @@
-import create from "zustand";
+import { create } from "zustand";
 
 const useDBResultStore = create((set) => ({
   selectedIdx: -1,
@@ -17,5 +17,4 @@ const useDBResultStore = create((set) => ({
       resultList: prev.splice(idx),
     })),
 }));
-
 export default useDBResultStore;

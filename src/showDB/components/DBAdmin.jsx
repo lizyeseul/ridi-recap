@@ -3,17 +3,25 @@ import bookData from "../../../sample_data/bookData";
 import orderData from "../../../sample_data/orderData";
 import UTIL from "@/scripts/utils.js";
 
-import useDBResultStore from "@/showDB/stores/useDBResultList";
+import useDBResultStore from "@/showDB/stores/useDBResultStore";
+import useDBSearchParamStore from "@/showDB/stores/useDBSearchParamStore";
+
+import DBSearchForm from "../components/DBSearchForm";
 
 import { useState, useEffect } from "react";
 
 function DBAdmin() {
-  const [table, setTable] = useState("unit");
+  // const [table, setTable] = useState("unit");
 
   const selectedIdx = useDBResultStore((state) => state.selectedIdx);
 
-  const [searchKey, setSearchKey] = useState();
-  const [searchValue, setSearchValue] = useState();
+  const searchKey = useDBSearchParamStore((state) => state.key);
+  const searchValue = useDBSearchParamStore((state) => state.value);
+  const { setKey: setSearchKey, setValue: setSearchValue } =
+    useDBSearchParamStore();
+
+  // const [searchKey, setSearchKey] = useState();
+  // const [searchValue, setSearchValue] = useState();
 
   const [currentData, setCurrentData] = useState({});
   const [resultList, setResultList] = useState([]);
@@ -51,19 +59,10 @@ function DBAdmin() {
     }
   }
 
-  function handleOnClickSearch() {
-    let obj = unitData;
-    if (table == "book") obj = bookData;
-    let keyword = searchKey;
-    //TODO yslee 검색 key+value로 수정
-
-    let rst = searchByKey(obj, keyword);
-    if (UTIL.isEmpty(rst)) setCurrentData("empty");
-  }
-
   return (
     <div>
-      <select
+      <DBSearchForm />
+      {/* <select
         onChange={(e) => {
           setTable(e.target.value);
         }}
@@ -72,10 +71,10 @@ function DBAdmin() {
         <option value="unit">unit</option>
         <option value="order">order</option>
         <option value="book">book</option>
-      </select>
-      <button onClick={handleOnClickSearch}>조회</button>
+      </select> */}
+      {/* <button onClick={handleOnClickSearch}>조회</button> */}
       <br />
-      <input
+      {/* <input
         label="key"
         placeholder="key"
         onChange={(e) => {
@@ -90,7 +89,7 @@ function DBAdmin() {
           setSearchValue(e.target.value);
         }}
         value={searchValue}
-      ></input>
+      ></input> */}
       <div style={{ maxHeight: "300px" }}>
         {typeof currentData === "object"
           ? JSON.stringify(currentData)
