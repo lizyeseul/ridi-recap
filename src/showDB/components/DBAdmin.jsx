@@ -62,34 +62,7 @@ function DBAdmin() {
   return (
     <div>
       <DBSearchForm />
-      {/* <select
-        onChange={(e) => {
-          setTable(e.target.value);
-        }}
-        value={table}
-      >
-        <option value="unit">unit</option>
-        <option value="order">order</option>
-        <option value="book">book</option>
-      </select> */}
-      {/* <button onClick={handleOnClickSearch}>조회</button> */}
       <br />
-      {/* <input
-        label="key"
-        placeholder="key"
-        onChange={(e) => {
-          setSearchKey(e.target.value);
-        }}
-        value={searchKey}
-      ></input>
-      <input
-        label="value"
-        placeholder="value"
-        onChange={(e) => {
-          setSearchValue(e.target.value);
-        }}
-        value={searchValue}
-      ></input> */}
       <div style={{ maxHeight: "300px" }}>
         {typeof currentData === "object"
           ? JSON.stringify(currentData)
@@ -100,6 +73,5 @@ function DBAdmin() {
       </div>
     </div>
   );
-  // return <div>{JSON.stringify(unitData)}</div>
 }
 export default DBAdmin;
